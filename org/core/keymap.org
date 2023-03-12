@@ -1,0 +1,20 @@
+* Keymap
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/lua/pepe/core/keymap.lua
+:END:
+
+** Leader Key
+   #+BEGIN_SRC lua
+   vim.g.mapleader = ' '
+   #+END_SRC
+
+** NvimTree
+   #+BEGIN_SRC lua
+   vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle)
+   #+END_SRC
+
+** Split Window
+   #+BEGIN_SRC lua
+   vim.keymap.set('n', '<leader>-', vim.cmd.new)
+   vim.keymap.set('n', '<leader>|', vim.cmd.vnew)
+   #+END_SRC

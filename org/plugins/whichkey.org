@@ -1,0 +1,9 @@
+* Which Key
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/after/plugin/whichkey.lua
+:END:
+
+** Config
+  #+BEGIN_SRC lua
+  require('which-key').setup()
+  #+END_SRC

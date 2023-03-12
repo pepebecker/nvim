@@ -1,0 +1,43 @@
+* NeoVim Config
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/lua/pepe/init.lua
+:END:
+
+** Init
+   #+BEGIN_SRC lua
+   require('pepe.core.config')
+   require('pepe.core.keymap')
+   require('pepe.core.packer')
+   require('pepe.core.neovide')
+   require('pepe.custom.tangle')
+   require('pepe.custom.autorun')
+   #+END_SRC
+
+** Core
+   - [[./core/config.org][Config]]
+   - [[./core/keymap.org][Keymap]]
+   - [[./core/packer.org][Packer]]
+   - [[./core/neovide.org][NeoVide]]
+
+** Custom
+   - [[./custom/tangle.org][Tangle]]
+   - [[./custom/autorun.org][Autorun]]
+
+** Plugins
+   - [[./plugins/bufferline.org][Bufferline]]
+   - [[./plugins/comment.org][Comment]]
+   - [[./plugins/copilot.org][Copilot]]
+   - [[./plugins/fugitive.org][Fugitive]]
+   - [[./plugins/gitsigns.org][Gitsigns]]
+   - [[./plugins/harpoon.org][Harpoon]]
+   - [[./plugins/lsp.org][LSP]]
+   - [[./plugins/lualine.org][Lualine]]
+   - [[./plugins/nvimtree.org][NvimTree]]
+   - [[./plugins/orgmode.org][Orgmode]]
+   - [[./plugins/tangle.org][Tangle]]
+   - [[./plugins/telescope.org][Telescope]]
+   - [[./plugins/treesitter.org][Treesitter]]
+   - [[./plugins/trouble.org][Trouble]]
+   - [[./plugins/undotree.org][Undotree]]
+   - [[./plugins/whichkey.org][WhichKey]]
+   - [[./plugins/zenmode.org][ZenMode]]

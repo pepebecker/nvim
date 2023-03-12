@@ -1,0 +1,27 @@
+* Bufferline 
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/after/plugin/bufferline.lua
+:END:
+
+** Setup
+   #+BEGIN_SRC lua
+   vim.opt.termguicolors = true
+   require('bufferline').setup({
+     options = {
+       numbers = 'buffer_id',
+       separator_style = 'thin',
+       underline_current_buffer = true,
+       offsets = {
+         {
+           filetype = 'NvimTree',
+           text = function ()
+             return 'File Explorer'
+           end,
+           text_align = 'left',
+           separator = ' ',
+         }
+       },
+       diagnostics = 'nvim_lsp',
+     }
+   })
+   #+END_SRC

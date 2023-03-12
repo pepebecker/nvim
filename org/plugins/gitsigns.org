@@ -1,0 +1,9 @@
+* GitSigns
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/after/plugin/gitsigns.lua
+:END:
+
+** Setup
+   #+BEGIN_SRC lua
+   require('gitsigns').setup()
+   #+END_SRC

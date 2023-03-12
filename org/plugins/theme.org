@@ -1,0 +1,26 @@
+* Theme
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/after/plugin/theme.lua
+:END:
+
+** Rose Pine theme
+   #+BEGIN_SRC lua
+   require('rose-pine').setup({
+     disable_background = true,
+     disable_float_background = true,
+   })
+   --vim.cmd('colorscheme rose-pine')
+   #+END_SRC
+
+** Tokyonight theme
+   #+BEGIN_SRC lua
+   require('tokyonight').setup({
+     transparent = true,
+     terminal_colors = true,
+     styles = {
+       sidebars = 'transparent',
+       floats = 'transparent',
+     },
+   })
+   vim.cmd('colorscheme tokyonight')
+   #+END_SRC

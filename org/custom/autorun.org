@@ -1,0 +1,5 @@
+* Tangle
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/lua/pepe/custom/autorun.lua
+:END: 
+

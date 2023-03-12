@@ -1,0 +1,194 @@
+* Packer
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/lua/pepe/core/packer.lua
+:END:
+
+** Initialize Packer
+   #+BEGIN_SRC lua
+   -- Only required if you have packer configured as `opt`
+   vim.cmd [[packadd packer.nvim]]
+
+   return require('packer').startup(function(use)
+   -- Packer can manage itself
+   use 'wbthomason/packer.nvim'
+   #+END_SRC
+
+** Plugins
+*** Themes
+    #+BEGIN_SRC lua
+    use { 'rose-pine/neovim', as = 'rose-pine' }
+    use { 'folke/tokyonight.nvim', as = 'tokyonight' }
+    #+END_SRC
+
+*** NvimTree
+    #+BEGIN_SRC lua
+    use 'nvim-tree/nvim-web-devicons'
+    use 'nvim-tree/nvim-tree.lua'
+    #+END_SRC
+
+*** Which Key
+    #+BEGIN_SRC lua
+    use 'folke/which-key.nvim'
+    #+END_SRC
+
+*** Autopairs
+    #+BEGIN_SRC lua
+    use 'windwp/nvim-autopairs'
+    #+END_SRC
+
+*** Commnt
+    #+BEGIN_SRC lua
+    use 'numToStr/Comment.nvim'
+    #+END_SRC
+
+*** Treesitter
+    #+BEGIN_SRC lua
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use('nvim-treesitter/playground')
+    use('JoosepAlviste/nvim-ts-context-commentstring')
+    #+END_SRC
+
+*** Mason
+    #+BEGIN_SRC lua
+    use {
+      'folke/neodev.nvim',
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'neovim/nvim-lspconfig',
+    }
+    #+END_SRC
+
+*** Telescope
+    #+BEGIN_SRC lua
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    #+END_SRC
+
+*** Harpoon
+    #+BEGIN_SRC lua
+    use 'theprimeagen/harpoon'
+    #+END_SRC
+
+*** ToggleTerm
+    #+BEGIN_SRC lua
+    use 'akinsho/toggleterm.nvim'
+    #+END_SRC
+
+*** Undotree
+    #+BEGIN_SRC lua
+    use 'mbbill/undotree'
+    #+END_SRC
+
+*** Fugitive
+    #+BEGIN_SRC lua
+    use 'tpope/vim-fugitive'
+    #+END_SRC
+
+*** GitSigns
+    #+BEGIN_SRC lua
+    use 'lewis6991/gitsigns.nvim'
+    #+END_SRC
+
+*** LSP Zero (not used)
+    #+BEGIN_SRC lua :tangle no
+    -- use {
+    --   'VonHeikemen/lsp-zero.nvim',
+    --   branch = 'v1.x',
+    --   requires = {
+    --     -- LSP Support
+    --     {'neovim/nvim-lspconfig'},             -- Required
+    --     {'williamboman/mason.nvim'},           -- Optional
+    --     {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+    --     -- Autocompletion
+    --     {'hrsh7th/nvim-cmp'},         -- Required
+    --     {'hrsh7th/cmp-nvim-lsp'},     -- Required
+    --     {'hrsh7th/cmp-buffer'},       -- Optional
+    --     {'hrsh7th/cmp-path'},         -- Optional
+    --     {'saadparwaiz1/cmp_luasnip'}, -- Optional
+    --     {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+    --     -- Snippets
+    --     {'L3MON4D3/LuaSnip'},             -- Required
+    --     {'rafamadriz/friendly-snippets'}, -- Optional
+    --   }
+    -- }
+    #+END_SRC
+
+*** Trouble
+    #+BEGIN_SRC lua
+    use 'folke/trouble.nvim'
+    #+END_SRC
+
+*** Zen Mode
+    #+BEGIN_SRC lua
+    use 'folke/zen-mode.nvim'
+    #+END_SRC
+
+*** Copilot
+    #+BEGIN_SRC lua
+    use 'github/copilot.vim'
+    #+END_SRC
+
+*** Bufferline
+    #+BEGIN_SRC lua
+    use {
+      'akinsho/bufferline.nvim', tag = 'v3.*',
+      requires = 'nvim-tree/nvim-web-devicons', 
+    }
+    #+END_SRC
+
+*** Lualine
+    #+BEGIN_SRC lua
+    use {
+      'nvim-lualine/lualine.nvim', as = 'lualine',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    }
+    #+END_SRC
+
+*** SnipRun
+    #+BEGIN_SRC lua
+    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
+    #+END_SRC
+
+*** OrgMode
+    #+BEGIN_SRC lua
+    use 'nvim-orgmode/orgmode'
+    use 'akinsho/org-bullets.nvim'
+    #+END_SRC
+
+# *** Neorg (not used)
+#   #+BEGIN_SRC
+#   use {
+#     'nvim-neorg/neorg',
+#     config = function()
+#       require('neorg').setup {
+#         load = {
+#           ['core.defaults'] = {},
+#           ['core.norg.concealer'] = {},
+#           ['core.norg.dirman'] = {
+#             config = {
+#               workspaces = {
+#                 nvim = '~/.config/nvim',
+#                 notes = '~/Documents/Neorg/notes',
+#                 work = '~/Documents/Neorg/work',
+#                 home = '~/Documents/Neorg/home',
+#                 klec = '~/Documents/Neorg/klec',
+#               },
+#               default_workspace = 'nvim',
+#             }
+#           }
+#         }
+#       }
+#     end,
+#     run = ':Neorg sync-parsers',
+#     requires = 'nvim-lua/plenary.nvim',
+#   }
+#   #+END_SRC
+
+** Finalize Setup 
+   #+BEGIN_SRC lua
+   end)
+   #+END_SRC

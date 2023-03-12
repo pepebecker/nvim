@@ -1,0 +1,10 @@
+* Trouble
+:PROPERTIES:
+:TANGLE: ~/.config/nvim/after/plugin/trouble.lua
+:END:
+
+** Config
+#+BEGIN_SRC lua
+require('trouble').setup()
+vim.keymap.set('n', '<leader>t', vim.cmd.TroubleToggle)
+#+END_SRC
