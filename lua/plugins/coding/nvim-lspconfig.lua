@@ -8,6 +8,7 @@ return {
           db_path = "/Users/pepe/.local/src/ds-pinyin-lsp/dict.db3",
         },
       },
+      sourcekit = {},
     },
   },
 }
